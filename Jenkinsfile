@@ -9,9 +9,9 @@ pipeline {
                bat 'dotnet build --configuration Release'
             }
         }
-        stage('Test') {
+        stage('Run') {
             steps {
-                echo 'Testing..'
+                bat 'dotnet run'
             }
         }
         stage('Deploy') {
